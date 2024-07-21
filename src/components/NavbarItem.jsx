@@ -13,12 +13,11 @@ export default function NavbarItem({ title, params }) {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
 
-  return (
-    /*
-     * Dynamic styling for the link params trending and top rated
-     *
-     */
+  /**
+   * Dynamic styling for the link params trending and top rated
+   */
 
+  return (
     <div>
       <Link
         className={`hover:text-amber-600 font-semibold ${
