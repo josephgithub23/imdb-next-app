@@ -1,5 +1,5 @@
 import Results from "@/components/Results";
-import { resolve } from "styled-jsx/css";
+// import { resolve } from "styled-jsx/css";
 
 const API_KEY = process.env.API_KEY;
 
@@ -19,6 +19,7 @@ export default async function Home({ searchParams }) {
     }, 2000); //Delay of 2 seconds before fetching to show loading effect.
   });
  */
+
   const res = await fetch(
     `https://api.themoviedb.org/3${
       genre === "fetchTrending" ? "/movie/top_rated" : "/trending/all/week"
@@ -26,7 +27,6 @@ export default async function Home({ searchParams }) {
     { next: { revalidate: 10000 } } //refreshing the page
   );
   const data = await res.json();
-
   if (!res.ok) {
     throw new Error("Failed to fetch");
   }
