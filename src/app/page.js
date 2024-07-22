@@ -1,5 +1,9 @@
 import Results from "@/components/Results";
 // import { resolve } from "styled-jsx/css";
+/**
+ * Server Side Rendering. SSR
+ * Server component... always uses promise.
+ */
 
 const API_KEY = process.env.API_KEY;
 

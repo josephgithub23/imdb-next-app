@@ -1,5 +1,8 @@
 import Results from "@/components/Results";
-
+/**
+ * Server Side Rendering. SSR
+ * Server component... always uses promise.
+ */
 export default async function SearchPage({ params }) {
   const searchTerm = params.searchTerm;
 

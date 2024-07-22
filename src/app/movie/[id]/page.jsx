@@ -1,5 +1,8 @@
 import Image from "next/image";
-
+/**
+ * Server Side Rendering. SSR
+ * Server component... always uses promise.
+ */
 export default async function MoviePage({ params }) {
   const movieId = params.id;
   const res = await fetch(
@@ -17,6 +20,7 @@ export default async function MoviePage({ params }) {
           }`}
           width={500}
           height={300}
+          alt={movie.title || movie.name}
           className="rounded-lg "
           style={{ maxWidth: "100%", height: "100%" }}
         ></Image>
