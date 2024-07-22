@@ -7,7 +7,7 @@ import { useEffect } from "react";
  * We pass two pros the error and the reset. Reset means to try again.
  */
 
-export default function error({ error, reset }) {
+export default function Error({ error, reset }) {
   useEffect(() => {
     console.log(error);
   }, [error]);
